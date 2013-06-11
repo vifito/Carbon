@@ -689,7 +689,7 @@ class Carbon extends \DateTime
          'month' => 12
       );
 
-      $unit = 'year';
+      $unit = 'año';
 
       foreach ($divs as $divUnit => $divValue) {
          if ($delta < $divValue) {
@@ -709,16 +709,16 @@ class Carbon extends \DateTime
 
       if ($isNow) {
          if ($isFuture) {
-            return $txt . ' from now';
+            return $txt . ' desde ahora';
          }
 
-         return $txt . ' ago';
+         return 'ya hizo ' . $txt;
       }
 
       if ($isFuture) {
-         return $txt . ' after';
+         return $txt . ' después';
       }
 
-      return $txt . ' before';
+      return $txt . ' antes';
    }
 }
